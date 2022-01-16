@@ -177,7 +177,34 @@ section .option-list .options{
     border-radius: 5px;
     padding: 8px 15px;
     margin-bottom: 15px;
+    font-size: 17px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+}
+
+section .option-list .options:hover{
+    color: coral;
+    background: white;
+    border-color: #b8daff;
+}
+
+.option-list .options:last-child{
+    margin-bottom: 0px;
+}
+
+.option-list .options .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    line-height: 24px;
+    pointer-events: none;
+}
+.option-list .options .icon.tick{
+color: #3fa356;
+border-color: #3e9e54;
 }
