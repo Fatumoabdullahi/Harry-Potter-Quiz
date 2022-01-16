@@ -4,21 +4,25 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
+
 body{
     background: coral;
 }
+
 .start-quiz{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .rules_box{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .start-quiz button{
     font-size: 25px;
     font-weight: 500;
@@ -29,4 +33,74 @@ body{
     border-radius: 5px;
     background: white;
     cursor: pointer;
+}
+
+.rules_box{
+    width: 540px;
+    background:white;
+    border-radius: 5px;
+}
+
+.rules_box .rules_title{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightpink;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 600;   
+}
+
+.rules_box .rules_list{
+    padding: 15px 35px;
+}
+
+.rules_box .rules_list .rules{
+margin: 5px 0;
+font-size: 15px;
+}
+
+.rules_box .rules_list .rules span{
+    font-weight: 600;
+    color: red;
+}
+.rules_box .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid lightpink;
+}
+
+.rules_box .buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid lightpink;
+    background: coral;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;   
+}
+.buttons button .restart{
+    color: white;
+    background: coral;
+}
+
+.buttons button .restart:hover{
+    background:;
+}
+
+.buttons button .quit{
+    color: coral;
+}
+
+.buttons button .quit:hover{
+    color: white;
+    background: coral;
 }
