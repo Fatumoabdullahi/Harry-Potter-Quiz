@@ -4,3 +4,29 @@
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
 }
+body{
+    background: coral;
+}
+.start-quiz{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.rules_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.start-quiz button{
+    font-size: 25px;
+    font-weight: 500;
+    color: coral;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
