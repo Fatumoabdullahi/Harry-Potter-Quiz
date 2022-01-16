@@ -167,11 +167,17 @@ font-size: 15px;
     font-size: 25px;
     font-weight: 600;
 }
-.quiz_box section .option_list{
+.quiz_box section .option-list{
     padding: 20px 0;
     display: block;
 }
-.quiz_box section .option_list .option{
+section .option-list .options{
     background: lightpink;
-    border: 1px solid lightpink;
+    border: 1px solid rgb(247, 214, 165);
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
