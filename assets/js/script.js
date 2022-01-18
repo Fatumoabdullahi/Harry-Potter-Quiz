@@ -56,6 +56,37 @@ function setNextQuestion() {
 };
 
 //Show Questions
+function showQuestion (question) {
+    questionEl.innerText = question.question
+    question.answers.forEach(answer => {
+        var button = document.createElement("button")
+        button.innerText = answer.text
+        button.classList.add("btn")
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener("click", selectAnswer)
+        answerButtonsEl.appendchild(button)
+    })
+};
 
+//reset
+function resetState () {
+    nextButton.classList.add("hide")
+    checkAnswerEl.classList.add("hide")
+    while (answerButtonsEl.firstChild) {
+        answerButtonsEl.removeChild
+        (answerButtonsEl.firstChild)
+    }
+};
+
+//answer function
+function selectAnswer(e) {
+    var selectButton = e.target;
+
+    var correct = selectedButton.dataset.correct;
+    checkAnswerEl.classList.remove("hide")
+    
+}
 
   
