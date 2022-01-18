@@ -86,7 +86,33 @@ function selectAnswer(e) {
 
     var correct = selectedButton.dataset.correct;
     checkAnswerEl.classList.remove("hide")
-    
+//double check this
+    if (correct) {
+        checkAnswerEl.innerHTML = "Great Job!";
+    } else {
+        checkAnswerEl.innerHTML = "Sorry, that was incorrect :(";
+        if (timeLeft <= 10) {
+            timeLeft=0;
+        } else {
+            timeLeft -= 10;
+        }
+    }
+
+Array.from(answerButtonsEl.children).forEach(button => {
+    setStatusClass(button, button.dataset.correct)
+})
+
+if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove("hide")
+    checkAnswerEl.classList.remove("hide")
+} else {
+    startButton.classList.remove("hide")
+} else {
+    startButton.classList.remove("hide")
+    saveScore();
 }
+};
+
+
 
   
