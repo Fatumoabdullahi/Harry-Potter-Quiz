@@ -4,86 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <script src="./assets/js/script.js"></script>
+    <title>Timed Quiz</title>
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
 </head>
-<body>
-    <!--Start Quiz Button set up-->
-    <div class="start-quiz"><button>Start Quiz</button></div>
-    <!--Quiz rules-->
-    <div class="rules_box">
-        <div class="rules_title">
-            <span>Here are a list of rules for this quiz</span>
-        </div>
-        <div class="rules_list">
-            <div class="rules">1. You will have <span>10 seconds</span> to complete each question.</div>
-            <div class="rules">2. You will collect points for every question you answer correctly.</div>
-            <div class="rules">3. Each question only has one correct answer.</div>
-            <div class="rules">4. Your final score will be displayed at the end.</div>
-            <div class="rules">5. Remember to have fun!</div>
-        </div>
-        <div class="buttons">
-        <button class="quit">Leave Quiz</button>
-        <button class="restart">Continue</button>
-        </div>
-    </div>
-        <!--Quiz box-->
-        <div class="quiz_box">
-            <header>
-                <div class="title">Harry Potter General Knowledge Quiz</div>
-                <div class="timer">
-                    <div class="time_text">Time Remaining</div>
-                    <div class="timer_second">10</div>
-                </div>
-            </header>
-            <section>
-                <div class="question_text">
-                    <span>At the first meeting of the Duelling Club, Draco Malfoy summoned what animal with the spell ‘Serpensortia’?</span>
-                </div>
-                <div class="option-list">
-                    <div class="options">
-                        <span>Frog</span>
-                        <div class="icon tick">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    </div>
-                    <div class="options">
-                        <span>Snake</span>
-                        <div class="icon cross">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </div>
-                    <div class="options">
-                        <span>Dragon</span>
-                    </div>
-                    <div class="options">
-                        <span>Bear</span>
-                    </div>
-                </div>
-            </section>
 
-            <!--Quiz box footer-->
-            <footer>
-                <div class="total_questions">
-                    <span><p>1</p>of<p>5</p>Questions</span>
-                </div>
-                <button class="next_button">Next Question</button>
-            </footer>
+<body>
+    <header>
+        <div class="scores">
+            <a id="highscores-link">High Scores</a>
         </div>
-        <!--Results Page-->
-        <div class="result-page">
-            <div class="icon">
-                <i class="fas fa-crown"></i>
-            </div>
-            <div class="complete-text">You have reached the end of this Quiz!</div>
-            <div class="score-text">
-                <span>You answered <p>3</p> out of <p>5</p> questions correctly.</span>
-            </div>
-            <div class="buttons">
-                <button class="restart">Play Again!</button>
-                <button class="quit">Quit</button>
+        <div id="timer" class="timer">
+            Time= 75
+        </div>
+    </header>
+
+    <section id="start-container" class="start-quiz">
+        <h1>Test your Harry Potter Knowledge</h1>
+        <h2>Some rules before you start</h2>
+        <p>
+            1. You will have 75 seconds to complete this Quiz.
+            2. You will collect points for every question you answer correctly.
+            3. If you answer a question incorrectly your time will be deducted by 10 seconds.
+            4. Your final score will be displayed at the end.
+            5. Remember to have fun!
+        </p>
+        <div class="controls">
+            <button id="start-quiz-btn" class="start-quiz-btn">Start Quiz</button>
+        </div>
+    </section>
+
+    <section id="questions-container" class="hide">
+        <h1 id="question">Question</h1>
+        <div id="answers-btn" class="btn-grid">
+            <button class="button">Answer 1</button>
+            <button class="button">Answer 2</button>
+            <button class="button">Answer 3</button>
+            <button class="button">Answer 4</button>
+        </div>
+        <h2 id="check-answer" class="next-btn hide">Next Question</h2>
+        <div class="controls">
+            <button id="next-btn" class="next-btn hide">Next</button>
+        </div>
+    </section>
+
+    <section id="score-container" class="hide">
+        <form id="submit-form">
+            <h3 id="your-score"></h3>
+            <label id="initials-label">Enter your name and save your score:</label>
+            <input type="text" id="initials-field" maxlength="5" placeholder="Enter your name"/>
+            <button id="submit-btn">Submit</button>
+        </form>
+    </section>
+
+    <section id="highscores" class="highscores-container hide">
+        <div id="high-scores">
+            <h1 class="centered">Leaderboard</h1>
+            <div id="highscore" class="highscore highscore-list"></div>
+            <div class="controls">
+                <button id="restart-btn">Restart</button>
+                <button id="clear-btn">Clear Score</button>
             </div>
         </div>
+    </section>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/questions.js"></script>
 </body>
 </html>
