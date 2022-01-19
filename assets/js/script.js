@@ -66,7 +66,7 @@ function showQuestion (question) {
             button.dataset.correct = answer.correct
         }
         button.addEventListener("click", selectAnswer)
-        answerButtonsEl.appendchild(button)
+        answerButtonsEl.appendChild(button)
     })
 };
 
@@ -113,6 +113,42 @@ if (shuffledQuestions.length > currentQuestionIndex + 1) {
 }
 };
 
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        element.classList.add("correct");
+    } else {
+        element.classList.add("wrong");
+    }
+};
+
+//saving scores
+function saveScore() {
+    clearInterval(timerID);
+    timerEl.textContent = "Time" + timeLeft;
+    setTimeout(function () {
+        questionContainerEl.classList.add("hide");
+        document.getElementById("score-container").classList.remove("hide");
+        document.getElementById("your-score").textContent = "Your score is" + timeLeft;
+    },2000)
+};
+
+var loadScores = function () {
+    if (!savedScores) {
+        return false;
+    }
+    savedScores = JSON.parse (savedScores);
+    var initials = document.querySelector("#initials-field").ariaValueMax;
+    var newScore = {
+        score: timeLeft,
+        initials:initials
+    }
+    savedScores.push(newScore);
+    console.log(savedScores)
 
 
-  
+    savedScores.forEach(score => {
+        initialsField.innerText = score.initials
+        scoreField.innerText = score.score
+    })
+};

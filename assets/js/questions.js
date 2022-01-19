@@ -17,7 +17,7 @@ var questions = [
              {text: "Hat", correct: false},
              {text: "Bat", correct: false},
          ]
-     }
+     },
      {
          question: "Which element is associated with Hufflepuff?",
          answers: [
@@ -26,7 +26,7 @@ var questions = [
              {text: "Water", correct: false},
              {text: "Air", correct: false},
          ]
-     }
+     },
      {
          question: "What was the name of the Black family’s house elf?",
          answers: [
@@ -35,7 +35,7 @@ var questions = [
             {text: "Dobby", correct: true},
             {text: "Kreacher", correct: false},
          ] 
-     }
+     },
      {
          question: "What position does Harry play on his Quidditch team?",
          answers: [
@@ -44,5 +44,5 @@ var questions = [
              {text:"Bludger", correct: false},
              {text:"keeper", correct: false},
          ]
-     }
-]
+     },
+];
