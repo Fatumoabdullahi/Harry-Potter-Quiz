@@ -1,72 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timed Quiz</title>
-    <link rel="stylesheet" href="./assets/css/styles.css"/>
-</head>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="scores">
-            <a id="highscores-link">High Scores</a>
-        </div>
-        <div id="timer" class="timer">
-            Time= 75
-        </div>
+      <div class="scores">
+        <a id="highscores-link">High Scores</a>
+      </div>
+      <div id="timer" class="timer">Time= 75</div>
     </header>
 
     <div id="start-container" class="start-quiz">
-        <h1>Test your Harry Potter Knowledge</h1>
-        <h2>Some rules before you start</h2>
-        <p>
-            1. You will have 75 seconds to complete this Quiz.
-            2. You will collect points for every question you answer correctly.
-            3. If you answer a question incorrectly your time will be deducted by 10 seconds.
-            4. Your final score will be displayed at the end.
-            5. Remember to have fun!
-        </p>
-        <div class="controls">
-            <button id="start-quiz-btn" class="start-quiz-btn">Start Quiz</button>
-        </div>
+      <h1>Test your Harry Potter Knowledge</h1>
+      <h2>Some rules before you start</h2>
+      <p>
+        1. You will have 75 seconds to complete this Quiz. 2. You will collect
+        points for every question you answer correctly. 3. If you answer a
+        question incorrectly your time will be deducted by 10 seconds. 4. Your
+        final score will be displayed at the end. 5. Remember to have fun!
+      </p>
+      <div class="controls">
+        <button id="start-quiz-btn" class="start-quiz-btn">Start Quiz</button>
+      </div>
     </div>
 
     <div id="questions-container" class="hide">
-        <h1 id="question">Question</h1>
-        <div id="answers-btn" class="grid-button">
-            <button class="button">Answer 1</button>
-            <button class="button">Answer 2</button>
-            <button class="button">Answer 3</button>
-            <button class="button">Answer 4</button>
-        </div>
-        <h2 id="check-answer" class="next-btn hide">Next Question</h2>
-        <div class="controls">
-            <button id="next-btn" class="next-btn hide">Next</button>
-        </div>
+      <h1 id="question">Question</h1>
+      <div id="answers-btn" class="grid-button">
+        <button class="button">Answer 1</button>
+        <button class="button">Answer 2</button>
+        <button class="button">Answer 3</button>
+        <button class="button">Answer 4</button>
+      </div>
+      <h2 id="check-answer" class="next-btn hide">Next Question</h2>
+      <div class="controls">
+        <button id="next-btn" class="next-btn hide">Next</button>
+      </div>
     </div>
 
     <div id="score-container" class="hide">
-        <form id="submit-form">
-            <h3 id="your-score"></h3>
-            <label id="initials-label">Enter your name and save your score:</label>
-            <input type="text" id="initials-field" maxlength="5" placeholder="Enter your name"/>
-            <button id="submit-btn">Submit</button>
-        </form>
+      <form id="submit-form">
+        <h3 id="your-score"></h3>
+        <label id="initials-label">Enter your name and save your score:</label>
+        <input
+          type="text"
+          id="initials-field"
+          maxlength="5"
+          placeholder="Enter your name"
+        />
+        <button id="submit-btn">Submit</button>
+      </form>
     </div>
 
     <div id="highscores" class="highscores-container hide">
-        <div id="highscores">
-            <h1 class="centered">Leaderboard</h1>
-            <div id="highscore" class="highscore highscore-list"></div>
-            <div class="controls">
-                <button id="restart-btn">Restart</button>
-                <button id="clear-btn">Clear Score</button>
-            </div>
+      <div id="highscores">
+        <h1 class="centered">Leaderboard</h1>
+        <div id="highscore" class="highscore highscore-list"></div>
+        <div class="controls">
+          <button id="restart-btn">Restart</button>
+          <button id="clear-btn">Clear Score</button>
         </div>
+      </div>
     </div>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/questions.js"></script>
-</body>
+  </body>
 </html>

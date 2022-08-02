@@ -1,10 +1,13 @@
 # Harry-Potter Quiz
-This assignment asked us to create a code-quiz using html,CSS and javascript in order to make a quiz application.
+
+Test your Harry Potter knowledge with this quiz built using HTML, CSS and Javascript. A race against the 75 second timer and a chance to play against your friends and view your highscores.
 
 # GitHub Link
+
 https://fatumoabdullahi.github.io/harry-potter-quiz/
 
 # Screenshot
+
 <figure> <img src=./assets/images/code-quiz.png></figure>
 
 # Technologies Used
@@ -12,7 +15,9 @@ https://fatumoabdullahi.github.io/harry-potter-quiz/
 1. HTML
 2. CSS
 3. Javascript
+
 # License
+
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including
@@ -31,5 +36,7 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 # Contact Information
+
 Email Address: fatumoabdullahi@outlook.com
